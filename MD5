@@ -1,0 +1,12 @@
+bbb7a87cab29659424ec37cf40cd2640 *DESCRIPTION
+df390c53434517b304ac5db487184641 *NAMESPACE
+ef66fd9039c805a0a0d23f730237ceda *R/Clayton.Markov.DATA.R
+8d545116b8aedfc3056ee1820a0fc4e1 *R/Clayton.Markov.MLE.R
+57a41c0b4cfbf46b706193f1afbe920b *R/Copula.Markov-internal.R
+05d174cef5b48b3ebb7726b49e939271 *R/Joe.Markov.DATA.R
+a74fcff018c6d855007f758afeda766b *R/Joe.Markov.MLE.R
+1208f0cd990448e950cd9619a67d81a7 *man/Clayton.Markov.DATA.Rd
+3eea72290d4ec4f77b946efe28454d17 *man/Clayton.Markov.MLE.Rd
+9da9c6c76992eb394b2ef37f96a6efba *man/Copula.Markov-package.Rd
+7ed401cc4067fb16de14e76e3dd2a869 *man/Joe.Markov.DATA.Rd
+e7379fe9ab68cdd68332eaae83e985c7 *man/Joe.Markov.MLE.Rd
