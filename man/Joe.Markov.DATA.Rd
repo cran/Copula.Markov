@@ -20,12 +20,10 @@ Joe.Markov.DATA(n, mu, sigma, alpha)
 \details{
 alpha>=1 for positive association
 }
-\value{
-time series data
-}
+\value{ Time series data }
 \references{
-Emura T and Long TH (2015), R routines for performing estimation and statistical process control under copula-based time series models, 
-under revision, Communications in Statistics - Simulation and Computation
+Emura T, Long TH, Sun LH (2015), R routines for performing estimation and statistical process control under copula-based time series models, 
+Communications in Statistics - Simulation and Computation
 
 Long TS and Emura T (2014), A control chart using copula-based Markov chain models, Journal of the Chinese Statistical Association 52 (No.4): 466-96
 }

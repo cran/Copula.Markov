@@ -1,5 +1,5 @@
 Joe.Markov.MLE <-
-function(Y,k=3,D=1,plot=TRUE){
+function(Y,k=3,D=1,plot=TRUE,GOF=FALSE){
   n=length(Y)   ##sample size##
   G=function(y,mu,sigma){pnorm((y-mu)/sigma)}   #G function
   g=function(y,mu,sigma){dnorm((y-mu)/sigma)}   #g function
@@ -310,7 +310,20 @@ function(Y,k=3,D=1,plot=TRUE){
   Gradient=F(mle.res[1],mle.res[2],mle.res[3])
   Hessian=Ja(mle.res[1],mle.res[2],mle.res[3])
   
+  ### Goodness-of-fit ###
+  F_par=pnorm( (sort(Y)-result[1])/result[2] )
+  F_emp=1:n/n
+  
+  CM.test=sum( (F_emp-F_par)^2 )
+  KS.test=max( abs( F_emp-F_par ) )
+  
+  if(GOF==TRUE){
+    plot(F_emp,F_par,xlab="F_empirical",ylab="F_parametric",xlim=c(0,1),ylim=c(0,1))
+    lines(x = c(0,1), y = c(0,1))
+  }
+  
  list(estimates=result,out_of_control=out_control,
-         Gradient=Gradient,Hessian=Hessian,Mineigenvalue_Hessian=min(eigen(Hessian)$value))
+    Gradient=Gradient,Hessian=Hessian,Mineigenvalue_Hessian=min(eigen(Hessian)$value),
+    CM.test=CM.test,KS.test=KS.test)
   
 }
