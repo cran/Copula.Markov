@@ -1,46 +1,42 @@
-\name{Clayton.Markov.MLE}
-\alias{Clayton.Markov.MLE}
+\name{Clayton.Markov.MLE.binom}
+\alias{Clayton.Markov.MLE.binom}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{
-Maximum Likelihood Estimation and Statistical Process Control Under the Clayton Copula
-}
+\title{Maximum Likelihood Estimation and Statistical Process Control Under the Clayton Copula}
 \description{
 The maximum likelihood estimates are produced and the Shewhart control chart is drawn with k-sigma control limits (e.g., 3-sigma). The dependence model follows the Clayton copula and the marginal (stationary) distribution follows the normal distribution.
 }
 \usage{
-Clayton.Markov.MLE(Y, k = 3, D = 1, plot = TRUE,GOF=FALSE)
+Clayton.Markov.MLE.binom(Y, size, k = 3, plot = TRUE)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{Y}{vector of datasets}
+  \item{Y}{vector of observations}
+  \item{size}{numbe of binomial trials}
   \item{k}{constant determining the length between LCL and UCL (k=3 corresponds to 3-sigma limit)}
-  \item{D}{diameter for U(-D, D) used in randomized Newton-Raphson}
   \item{plot}{show the control chart if TRUE}
-  \item{GOF}{show the model diagnostic plot if TRUE}
 }
 \value{
-\item{estimates }{estimates}
+\item{p }{estimate, SE, and 95CI}
+\item{alpha }{estimate, SE, and 95CI}
 \item{out_of_control }{IDs for out-of-control points}
 \item{Gradient }{gradients (must be zero)}
 \item{Hessian }{Hessian matrix}
 \item{Mineigenvalue_Hessian }{Minimum eigenvalue for the Hessian matrix}
-\item{CM.test}{Cramer-von Mises test statistics}
-\item{KS.test}{Kolmogorov-Smirnov test statistics}
 }
 \references{
-Emura T, Long TH, Sun LH (2017), R routines for performing estimation and
- statistical process control under copula-based time series models,
- Communications in Statistics - Simulation and Computation, 46 (4): 3067-87
+Chen W (2018) Copula-based Markov chain model with binomial data, NCU Library
 
-Long TH and Emura T (2014), A control chart using copula-based Markov chain models, Journal of the Chinese Statistical Association 52 (No.4): 466-96
+Chen W, Emura T (2018-) A control chart using a copula-based Markov chain
+ for attribute data, submitted for publication
 }
-\author{
-Takeshi Emura
-}
+\author{ Takeshi Emura }
 \examples{
+size=50
+prob=0.5
+alpha=2
 set.seed(1)
-Y=Clayton.Markov.DATA(n=1000,mu=0,sigma=1,alpha=2)
-Clayton.Markov.MLE(Y,plot=TRUE)
+Y=Clayton.Markov.DATA.binom(n=500,size,prob,alpha)
+Clayton.Markov.MLE.binom(Y,size=size,k=3,plot=TRUE)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.

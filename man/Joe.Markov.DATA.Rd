@@ -22,8 +22,9 @@ alpha>=1 for positive association
 }
 \value{ Time series data }
 \references{
-Emura T, Long TH, Sun LH (2015), R routines for performing estimation and statistical process control under copula-based time series models, 
-Communications in Statistics - Simulation and Computation
+Emura T, Long TH, Sun LH (2017), R routines for performing estimation and
+ statistical process control under copula-based time series models,
+ Communications in Statistics - Simulation and Computation, 46 (4): 3067-87
 
 Long TS and Emura T (2014), A control chart using copula-based Markov chain models, Journal of the Chinese Statistical Association 52 (No.4): 466-96
 }

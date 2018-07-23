@@ -28,8 +28,9 @@ Joe.Markov.MLE(Y, k = 3, D = 1, plot = TRUE,GOF=FALSE)
 \item{KS.test}{Kolmogorov-Smirnov test statistics}
 }
 \references{
-Emura T, Long TH, Sun LH (2015), R routines for performing estimation and statistical process control under copula-based time series models,
- Communications in Statistics - Simulation and Computation, DOI: 10.1080/03610918.2015.1073303
+Emura T, Long TH, Sun LH (2017), R routines for performing estimation and
+ statistical process control under copula-based time series models,
+ Communications in Statistics - Simulation and Computation, 46 (4): 3067-87
 
 Long TH and Emura T (2014), A control chart using copula-based Markov chain models, Journal of the Chinese Statistical Association 52 (No.4): 466-96}
 \author{
