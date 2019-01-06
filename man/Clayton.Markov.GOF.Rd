@@ -1,0 +1,43 @@
+\name{Clayton.Markov.GOF}
+\alias{Clayton.Markov.GOF}
+%- Also NEED an '\alias' for EACH other topic documented here.
+\title{
+Goodness-of-fit test
+}
+\description{
+Perform a parametric bootstrap test.
+}
+\usage{
+Clayton.Markov.GOF(Y, k = 3, D = 1, B = 100,GOF.plot=FALSE)
+}
+%- maybe also 'usage' for other objects documented here.
+\arguments{
+  \item{Y}{vector of datasets}
+  \item{k}{constant determining the length between LCL and UCL (k=3 corresponds to 3-sigma limit)}
+  \item{D}{diameter for U(-D, D) used in randomized Newton-Raphson}
+  \item{B}{the number of Bootstrap replications}
+  \item{GOF.plot}{if TRUE, show the model diagnostic plots for B bootstrap replications}
+}
+\value{
+\item{CM}{Cramer-von Mises test}
+\item{KS}{Kolmogorov-Smirnov test}
+}
+\references{
+Emura T, Long TH, Sun LH (2017), R routines for performing estimation and
+ statistical process control under copula-based time series models,
+ Communications in Statistics - Simulation and Computation, 46 (4): 3067-87
+
+Long TH and Emura T (2014), A control chart using copula-based Markov chain models, Journal of the Chinese Statistical Association 52 (No.4): 466-96
+}
+\author{
+Takeshi Emura
+}
+\examples{
+set.seed(1)
+Y=Clayton.Markov.DATA(n=1000,mu=0,sigma=1,alpha=2)
+Clayton.Markov.GOF(Y,B=5,GOF.plot=TRUE)
+}
+% Add one or more standard keywords, see file 'KEYWORDS' in the
+% R documentation directory.
+\keyword{ Clayton copula }
+\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line

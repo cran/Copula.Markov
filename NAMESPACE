@@ -1,4 +1,4 @@
 exportPattern("^[[:alpha:]]+")
-importFrom("graphics", "abline", "text", "plot", "lines")
+importFrom("graphics", "abline", "text", "plot", "lines", "axis", "par")
 importFrom("stats", "cor", "dnorm", "pnorm", "qnorm", "rnorm", "runif", "sd",
- "ts.plot", "uniroot", "dbinom", "pbinom","qbinom", "rbinom")
+ "ts.plot", "uniroot", "dbinom", "pbinom","qbinom", "rbinom", "nlm")
