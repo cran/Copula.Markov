@@ -27,15 +27,19 @@ Clayton.Markov2.MLE = function(Y, k = 3, D = 1, plot = TRUE){
   tau_0 = cor(Y[2:n],Y[1:(n-1)],method="kendall")
   initial = c(mean(Y),log(sd(Y)), log(2*tau_0/(1-tau_0)))
   
+  count = 0
   repeat{
-    
+    count = count + 1
     res = try(nlm(logL, initial , hessian = TRUE))
     if( class(res)!="try-error" ){
       break;
     }else{
       initial = initial + runif(n = 3, min = -D, max = D)
     }
-    
+    if(count>100){
+      return(warning("error"))
+      break;
+    }
   }
   
   ###result
@@ -69,4 +73,3 @@ Clayton.Markov2.MLE = function(Y, k = 3, D = 1, plot = TRUE){
   
   return(list( estimate = MLE, out_of_control = OC, gradient = res$gradient, hessian = res$hessian))
 }
-

@@ -8,7 +8,7 @@ Goodness-of-fit test
 Perform a parametric bootstrap test.
 }
 \usage{
-Clayton.Markov.GOF(Y, k = 3, D = 1, B = 100,GOF.plot=FALSE)
+Clayton.Markov.GOF(Y, k = 3, D = 1, B = 200,GOF.plot=FALSE)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
