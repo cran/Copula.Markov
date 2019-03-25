@@ -322,8 +322,10 @@ function(Y,k=3,D=1,plot=TRUE,GOF=FALSE){
     lines(x = c(0,1), y = c(0,1))
   }
   
+  
+  
  list(estimates=result,out_of_control=out_control,
     Gradient=Gradient,Hessian=Hessian,Mineigenvalue_Hessian=min(eigen(Hessian)$value),
-    CM.test=CM.test,KS.test=KS.test)
+    CM.test=CM.test,KS.test=KS.test, log_likelihood = -n*L_function(c(result[1],result[2],result[3])))
   
 }

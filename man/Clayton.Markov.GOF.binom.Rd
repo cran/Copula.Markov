@@ -1,5 +1,5 @@
-\name{Clayton.Markov.GOF}
-\alias{Clayton.Markov.GOF}
+\name{Clayton.Markov.GOF.binom}
+\alias{Clayton.Markov.GOF.binom}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 Goodness-of-fit test
@@ -8,13 +8,13 @@ Goodness-of-fit test
 Perform a parametric bootstrap test.
 }
 \usage{
-Clayton.Markov.GOF(Y, k = 3, D = 1, B = 200,GOF.plot=FALSE)
+Clayton.Markov.GOF.binom(Y, k = 3, size, B = 200,GOF.plot=FALSE)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{Y}{vector of datasets}
   \item{k}{constant determining the length between LCL and UCL (k=3 corresponds to 3-sigma limit)}
-  \item{D}{diameter for U(-D, D) used in randomized Newton-Raphson}
+  \item{size}{number of binomial trials}
   \item{B}{the number of Bootstrap replications}
   \item{GOF.plot}{if TRUE, show the model diagnostic plots for B bootstrap replications}
 }
@@ -23,24 +23,22 @@ Clayton.Markov.GOF(Y, k = 3, D = 1, B = 200,GOF.plot=FALSE)
 \item{KS}{Kolmogorov-Smirnov test}
 }
 \references{
-Emura T, Long TH, Sun LH (2017), R routines for performing estimation and
- statistical process control under copula-based time series models,
- Communications in Statistics - Simulation and Computation, 46 (4): 3067-87
-
-Long TH and Emura T (2014), A control chart using copula-based Markov chain models, Journal of the Chinese Statistical Association 52 (No.4): 466-96
-
-Huang XW, Emura T (2019-), Model diagnostic procedures for copula-based Markov chain
- models for statistical process control, in revision
+Huang XW, Chen W, Emura T (2019) A control chart using a copula-based Markov chain
+ for attribute data, in revision.
 }
 \author{
-Takeshi Emura
+Huang XW, Emura T
 }
 \examples{
+size=50
+prob=0.5
+alpha=2
 set.seed(1)
-Y=Clayton.Markov.DATA(n=1000,mu=0,sigma=1,alpha=2)
-Clayton.Markov.GOF(Y,B=5,GOF.plot=TRUE)
+Y=Clayton.Markov.DATA.binom(n=500,size,prob,alpha)
+Clayton.Markov.GOF.binom(Y,size=size,B=5,k=3,GOF.plot=TRUE) ## B=5 to save time
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
 \keyword{ Clayton copula }
+\keyword{ Binomial distribution }
 \keyword{ Goodness-of-fit }% __ONLY ONE__ keyword per line

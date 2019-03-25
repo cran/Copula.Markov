@@ -8,7 +8,7 @@ Maximum Likelihood Estimation and Statistical Process Control Under the Clayton 
 The maximum likelihood estimates are produced and the Shewhart control chart is drawn with k-sigma control limits (e.g., 3-sigma). The dependence model follows the Clayton copula and the marginal (stationary) distribution follows the normal distribution.
 }
 \usage{
-Clayton.Markov2.MLE(Y, k = 3, D = 1, plot = TRUE)
+Clayton.Markov2.MLE(Y, k = 3, D = 1, plot = TRUE, GOF=FALSE)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -16,6 +16,7 @@ Clayton.Markov2.MLE(Y, k = 3, D = 1, plot = TRUE)
   \item{k}{constant determining the length between LCL and UCL (k=3 corresponds to 3-sigma limit)}
   \item{D}{diameter for U(-D, D) used in randomized Newton-Raphson}
   \item{plot}{show the control chart if TRUE}
+  \item{GOF}{show the model diagnostic plot if TRUE}
 }
 \value{
 \item{estimates }{estimates}
@@ -25,11 +26,8 @@ Clayton.Markov2.MLE(Y, k = 3, D = 1, plot = TRUE)
 \item{Mineigenvalue_Hessian }{Minimum eigenvalue for the Hessian matrix}
 }
 \references{
-Emura T, Long TH, Sun LH (2017), R routines for performing estimation and
- statistical process control under copula-based time series models,
- Communications in Statistics - Simulation and Computation, 46 (4): 3067-87
-
-Long TH and Emura T (2014), A control chart using copula-based Markov chain models, Journal of the Chinese Statistical Association 52 (No.4): 466-96
+Huang XW, Emura T (2019-), Model diagnostic procedures for copula-based Markov chain
+ models for statistical process control, in revision
 }
 \author{
 Xinwei Huang and Takeshi Emura
@@ -46,5 +44,6 @@ Clayton.Markov2.MLE(Y, plot=TRUE)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+\keyword{ Clayton copula }
+\keyword{ Second-order model }
+\keyword{ MLE }% __ONLY ONE__ keyword per line

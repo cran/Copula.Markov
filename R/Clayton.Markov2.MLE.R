@@ -1,4 +1,4 @@
-Clayton.Markov2.MLE = function(Y, k = 3, D = 1, plot = TRUE){
+Clayton.Markov2.MLE = function(Y, k = 3, D = 1, plot = TRUE, GOF=FALSE){
   
   n = length(Y)
   rec = NA
@@ -25,7 +25,7 @@ Clayton.Markov2.MLE = function(Y, k = 3, D = 1, plot = TRUE){
   
   ###initial value and randomize
   tau_0 = cor(Y[2:n],Y[1:(n-1)],method="kendall")
-  initial = c(mean(Y),log(sd(Y)), log(2*tau_0/(1-tau_0)))
+  initial = c(mean(Y),log(sd(Y)), log(ifelse(tau_0 < 0, 1, 2*tau_0/(1-tau_0))))
   
   count = 0
   repeat{
@@ -52,7 +52,7 @@ Clayton.Markov2.MLE = function(Y, k = 3, D = 1, plot = TRUE){
   ###plot
   if(plot==TRUE){
     par(mar=c(4,5,2,5))
-    plot(Y~c(1:n), type = "b", ylim = c(1.1*UCL-0.1*LCL, 1.1*LCL-0.1*UCL),
+    plot(Y~c(1:n), type = "b", ylim = c(1.1*LCL-0.1*UCL, 1.1*UCL-0.1*LCL),
          ylab = "Y", xlab = "Time", cex = 1, cex.lab = 1)
     abline(h=UCL, lty = 3, lwd = 2)
     abline(h=LCL, lty = 3, lwd = 2)
@@ -67,9 +67,24 @@ Clayton.Markov2.MLE = function(Y, k = 3, D = 1, plot = TRUE){
     OC = "NONE"
   }
   
+  ### Goodness-of-fit ###
+  F_par=pnorm( (sort(Y)-mu.hat)/sigma.hat )
+  F_emp=1:n/n
+  
+  CM.test=sum( (F_emp-F_par)^2 )
+  KS.test=max( abs( F_emp-F_par ) )
+  
+  if(GOF==TRUE){
+    plot(F_emp,F_par,xlab="F_empirical",ylab="F_parametric",xlim=c(0,1),ylim=c(0,1))
+    lines(x = c(0,1), y = c(0,1))
+  }
+  
+  
   ##output
   MLE = c(mu.hat, sigma.hat, alpha.hat, UCL, LCL)
   names(MLE) = c("mu", "sigma", "alpha", "UCL", "LCL")
   
-  return(list( estimate = MLE, out_of_control = OC, gradient = res$gradient, hessian = res$hessian))
+  return(list( estimates = MLE, out_of_control = OC, 
+               gradient = res$gradient, hessian = res$hessian, 
+               CM.test=CM.test, KS.test=KS.test,log_likelihood = -logL(res$estimate)))
 }

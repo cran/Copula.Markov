@@ -24,11 +24,8 @@ Clayton.Markov2.DATA(n, mu, sigma, alpha)
 time series data
 }
 \references{
-Emura T, Long TH, Sun LH (2017), R routines for performing estimation and
- statistical process control under copula-based time series models,
- Communications in Statistics - Simulation and Computation, 46 (4): 3067-87
-
-Long TH and Emura T (2014), A control chart using copula-based Markov chain models, Journal of the Chinese Statistical Association 52 (No.4): 466-96
+Huang XW, Emura T (2019-), Model diagnostic procedures for copula-based Markov chain
+ models for statistical process control, in revision
 }
 \author{
 Xinwei Huang and Takeshi Emura
@@ -40,4 +37,5 @@ Clayton.Markov2.DATA(n = 100, mu = 0, sigma = 1, alpha = 2)
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
 \keyword{ Clayton copula }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+\keyword{ Second-order model }
+\keyword{ Data generation }% __ONLY ONE__ keyword per line

@@ -6,14 +6,16 @@
 The maximum likelihood estimates are produced and the Shewhart control chart is drawn with k-sigma control limits (e.g., 3-sigma). The dependence model follows the Clayton copula and the marginal (stationary) distribution follows the normal distribution.
 }
 \usage{
-Clayton.Markov.MLE.binom(Y, size, k = 3, plot = TRUE)
+Clayton.Markov.MLE.binom(Y, size, k = 3, method="nlm", plot = TRUE, GOF=FALSE)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{Y}{vector of observations}
   \item{size}{numbe of binomial trials}
+  \item{method}{nlm or Newton}
   \item{k}{constant determining the length between LCL and UCL (k=3 corresponds to 3-sigma limit)}
   \item{plot}{show the control chart if TRUE}
+  \item{GOF}{show the model diagnostic plot if TRUE}
 }
 \value{
 \item{p }{estimate, SE, and 95CI}
@@ -26,10 +28,10 @@ Clayton.Markov.MLE.binom(Y, size, k = 3, plot = TRUE)
 \references{
 Chen W (2018) Copula-based Markov chain model with binomial data, NCU Library
 
-Chen W, Emura T (2018-) A control chart using a copula-based Markov chain
- for attribute data, submitted for publication
+Huang XW, Chen W, Emura T (2019) A control chart using a copula-based Markov chain
+ for attribute data, in revision.
 }
-\author{ Takeshi Emura }
+\author{ Huang XW, Emura T }
 \examples{
 size=50
 prob=0.5
@@ -40,5 +42,6 @@ Clayton.Markov.MLE.binom(Y,size=size,k=3,plot=TRUE)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+\keyword{ Clayton copula }
+\keyword{ Binomial distribution }
+\keyword{ MLE }% __ONLY ONE__ keyword per line
