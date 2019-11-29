@@ -8,7 +8,7 @@ Maximum Likelihood Estimation and Statistical Process Control Under the Joe Copu
 The maximum likelihood estimates are produced and the Shewhart control chart is drawn with k-sigma control limits (e.g., 3-sigma). The dependence model follows the Joe copula and the marginal (stationary) distribution follows the normal distribution.
 }
 \usage{
-Joe.Markov.MLE(Y, k = 3, D = 1, plot = TRUE,GOF=FALSE)
+Joe.Markov.MLE(Y, k = 3, D = 1, plot = TRUE,GOF=FALSE,method = "nlm")
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -17,15 +17,20 @@ Joe.Markov.MLE(Y, k = 3, D = 1, plot = TRUE,GOF=FALSE)
   \item{D}{diameter for U(-D, D) used in randomized Newton-Raphson}
   \item{plot}{show the control chart if TRUE}
   \item{GOF}{show the model diagnostic plot if TRUE}
+  \item{method}{apply "nlm" or "Newton" method}
 }
 \value{
-\item{estimates }{estimates}
+\item{mu }{estimate, SE, and 95 percent CI}
+\item{sigma }{estimate, SE, and 95 percent CI}
+\item{alpha }{estimate, SE, and 95 percent CI}
+\item{CL }{LCL = mu - k*sigma, UCL = mu + k*sigma}
 \item{out_of_control }{IDs for out-of-control points}
 \item{Gradient }{gradients (must be zero)}
 \item{Hessian }{Hessian matrix}
 \item{Mineigenvalue_Hessian }{Minimum eigenvalue for the Hessian matrix}
-\item{CM.test}{Cramer-von Mises test statistics}
-\item{KS.test}{Kolmogorov-Smirnov test statistics}
+\item{KS.test }{KS statistics}
+\item{CM.test }{CM statistics}
+\item{log.likelihood }{Log-likelihood value for the estimation}
 }
 \references{
 Emura T, Long TH, Sun LH (2017), R routines for performing estimation and
@@ -34,7 +39,7 @@ Emura T, Long TH, Sun LH (2017), R routines for performing estimation and
 
 Long TH and Emura T (2014), A control chart using copula-based Markov chain models, Journal of the Chinese Statistical Association 52 (No.4): 466-96}
 \author{
-Takeshi Emura
+Long TH, Huang XW and Takeshi Emura
 }
 \examples{
 n=1000

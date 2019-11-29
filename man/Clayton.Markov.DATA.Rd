@@ -6,6 +6,7 @@ Generating Time Series Data Under a Copula-Based Markov Chain Model with the Cla
 }
 \description{
 Time-series datasets are generated under a copula-based Markov chain model with the Clayton copula.
+ See Long et al. (2014) and Emura et al. (2017) for the details.
 }
 \usage{
 Clayton.Markov.DATA(n, mu, sigma, alpha)
@@ -21,21 +22,22 @@ Clayton.Markov.DATA(n, mu, sigma, alpha)
 -1<alpha<0 for negative association; alpha>0 for positive association
 }
 \value{
-time series data
+Time series data of size n.
 }
 \references{
 Emura T, Long TH, Sun LH (2017), R routines for performing estimation and
  statistical process control under copula-based time series models,
  Communications in Statistics - Simulation and Computation, 46 (4): 3067-87
 
-Long TH and Emura T (2014), A control chart using copula-based Markov chain models, Journal of the Chinese Statistical Association 52 (No.4): 466-96
+Long TH and Emura T (2014), A control chart using copula-based Markov chain models,
+ Journal of the Chinese Statistical Association 52 (No.4): 466-96
 }
 \author{
 Takeshi Emura
 }
 \examples{
 set.seed(1)
-Y=Clayton.Markov.DATA(n=1000,mu=0,sigma=1,alpha=8)
+Y=Clayton.Markov.DATA(n=1000,mu=0,sigma=1,alpha=6)
 Clayton.Markov.MLE(Y,plot=TRUE)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the

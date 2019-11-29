@@ -18,18 +18,22 @@ Clayton.Markov.MLE.binom(Y, size, k = 3, method="nlm", plot = TRUE, GOF=FALSE)
   \item{GOF}{show the model diagnostic plot if TRUE}
 }
 \value{
-\item{p }{estimate, SE, and 95CI}
-\item{alpha }{estimate, SE, and 95CI}
+\item{p }{estimate, SE, and 95 percent CI}
+\item{alpha }{estimate, SE, and 95 percent CI}
+\item{CL }{mu = n*p, sigma = sqrt(n*p*(1-p)), LCL = mu - k*sigma, UCL = mu + k*sigma}
 \item{out_of_control }{IDs for out-of-control points}
 \item{Gradient }{gradients (must be zero)}
 \item{Hessian }{Hessian matrix}
 \item{Mineigenvalue_Hessian }{Minimum eigenvalue for the Hessian matrix}
+\item{KS.test }{KS statistics}
+\item{CM.test }{CM statistics}
+\item{log_likelihood }{Log-likelihood value for the estimation}
 }
 \references{
 Chen W (2018) Copula-based Markov chain model with binomial data, NCU Library
 
-Huang XW, Chen W, Emura T (2019) A control chart using a copula-based Markov chain
- for attribute data, in revision.
+Huang XW, Chen W, Emura T (2019-), Likelihood-based inference for a copula-based Markov
+ chain model with binomial time series, in review
 }
 \author{ Huang XW, Emura T }
 \examples{

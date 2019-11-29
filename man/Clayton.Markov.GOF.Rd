@@ -2,10 +2,11 @@
 \alias{Clayton.Markov.GOF}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-Goodness-of-fit test
+A goodness-of-fit test for the marginal normal distribution.
 }
 \description{
-Perform a parametric bootstrap test.
+Perform a parametric bootstrap test based on the Cramer-von Mises and Kolmogorov-Smirnov statistics
+ as proposed by Huang and Emura (2019).
 }
 \usage{
 Clayton.Markov.GOF(Y, k = 3, D = 1, B = 200,GOF.plot=FALSE)
@@ -19,8 +20,10 @@ Clayton.Markov.GOF(Y, k = 3, D = 1, B = 200,GOF.plot=FALSE)
   \item{GOF.plot}{if TRUE, show the model diagnostic plots for B bootstrap replications}
 }
 \value{
-\item{CM}{Cramer-von Mises test}
-\item{KS}{Kolmogorov-Smirnov test}
+\item{CM}{The Cramer-von Mises statistic and its P-value}
+\item{KS}{The Kolmogorov-Smirnov statistic and its P-value}
+\item{CM.boot}{Bootstrap values of the Cramer-von Mises statistics}
+\item{KS.boot}{Bootstrap values of the Kolmogorov-Smirnov statistics}
 }
 \references{
 Emura T, Long TH, Sun LH (2017), R routines for performing estimation and
@@ -29,8 +32,9 @@ Emura T, Long TH, Sun LH (2017), R routines for performing estimation and
 
 Long TH and Emura T (2014), A control chart using copula-based Markov chain models, Journal of the Chinese Statistical Association 52 (No.4): 466-96
 
-Huang XW, Emura T (2019-), Model diagnostic procedures for copula-based Markov chain
- models for statistical process control, in revision
+Huang XW, Emura T (2019), Model diagnostic procedures for copula-based Markov chain models
+ for statistical process control, Communications in Statistics - Simulation and Computation,
+ doi:10.1080/03610918.2019.1602647
 }
 \author{
 Takeshi Emura
@@ -43,4 +47,5 @@ Clayton.Markov.GOF(Y,B=5,GOF.plot=TRUE)
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
 \keyword{ Clayton copula }
+\keyword{ Normal distribution }
 \keyword{ Goodness-of-fit }% __ONLY ONE__ keyword per line

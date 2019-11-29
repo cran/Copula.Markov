@@ -798,7 +798,7 @@ Clayton.Markov.MLE.binom <-
          out_of_control=out_control,
          Gradient=res$gradient,Hessian=res$hessian,
          Mineigenvalue_Hessian=min(eigen(res$hessian)$value),KS.test = KS.test, CM.test = CM.test, 
-         log.likelihood = log.l(c(res$result_p[1], alpha=res$result_a[1])))
+         log_likelihood = log.l(c(res$result_p[1], alpha=res$result_a[1])))
     
   }
 

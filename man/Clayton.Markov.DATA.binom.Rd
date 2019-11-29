@@ -21,13 +21,13 @@ Clayton.Markov.DATA.binom(n, size, prob, alpha)
 -1<alpha<0 for negative association; alpha>0 for positive association
 }
 \value{
-time series data
+Time series data of size n (this is different from the number of binomial trials = "size").
 }
 \references{
 Chen W (2018) Copula-based Markov chain model with binomial data, NCU Library
 
-Huang XW, Chen W, Emura T (2019) A control chart using a copula-based Markov chain
- for attribute data, in revision.
+Huang XW, Chen W, Emura T (2019-), Likelihood-based inference for a copula-based Markov
+ chain model with binomial time series, in review
 }
 \author{
 Huang XW, Chen W, Emura T

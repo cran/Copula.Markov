@@ -21,11 +21,12 @@ Clayton.Markov2.DATA(n, mu, sigma, alpha)
 -1<alpha<0 for negative association; alpha>0 for positive association
 }
 \value{
-time series data
+Time series data of size n
 }
 \references{
-Huang XW, Emura T (2019-), Model diagnostic procedures for copula-based Markov chain
- models for statistical process control, in revision
+Huang XW, Emura T (2019), Model diagnostic procedures for copula-based Markov chain models
+ for statistical process control, Communications in Statistics - Simulation and Computation,
+ doi:10.1080/03610918.2019.1602647
 }
 \author{
 Xinwei Huang and Takeshi Emura
