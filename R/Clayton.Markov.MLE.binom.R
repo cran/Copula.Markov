@@ -794,10 +794,10 @@ Clayton.Markov.MLE.binom <-
     CM.test=sum( (F_emp-F_par)^2 )
     KS.test=max( abs( F_emp-F_par ) )
     
-    list(p=res$result_p,alpha=res$result_a,CL=c(mu=mu,sigma=sigma,UCL=UCL,LCL=LCL),
+    list(p=res$result_p,alpha=res$result_a,Control_Limit = c(Center = mu, Lower = LCL, Upper = UCL),
          out_of_control=out_control,
          Gradient=res$gradient,Hessian=res$hessian,
-         Mineigenvalue_Hessian=min(eigen(res$hessian)$value),KS.test = KS.test, CM.test = CM.test, 
+         Eigenvalue_Hessian=eigen(res$hessian)$value,KS.test = KS.test, CM.test = CM.test, 
          log_likelihood = log.l(c(res$result_p[1], alpha=res$result_a[1])))
     
   }

@@ -20,11 +20,11 @@ Clayton.Markov.MLE.binom(Y, size, k = 3, method="nlm", plot = TRUE, GOF=FALSE)
 \value{
 \item{p }{estimate, SE, and 95 percent CI}
 \item{alpha }{estimate, SE, and 95 percent CI}
-\item{CL }{mu = n*p, sigma = sqrt(n*p*(1-p)), LCL = mu - k*sigma, UCL = mu + k*sigma}
+\item{Control_Limit }{Center = n*p, LCL = mu - k*sigma, UCL = mu + k*sigma}
 \item{out_of_control }{IDs for out-of-control points}
 \item{Gradient }{gradients (must be zero)}
 \item{Hessian }{Hessian matrix}
-\item{Mineigenvalue_Hessian }{Minimum eigenvalue for the Hessian matrix}
+\item{Eigenvalue_Hessian }{Eigenvalues for the Hessian matrix}
 \item{KS.test }{KS statistics}
 \item{CM.test }{CM statistics}
 \item{log_likelihood }{Log-likelihood value for the estimation}

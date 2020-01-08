@@ -37,7 +37,7 @@ Takeshi Emura
 }
 \examples{
 set.seed(1)
-Y=Clayton.Markov.DATA(n=1000,mu=0,sigma=1,alpha=6)
+Y=Clayton.Markov.DATA(n=1000,mu=0,sigma=1,alpha=8)
 Clayton.Markov.MLE(Y,plot=TRUE)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the

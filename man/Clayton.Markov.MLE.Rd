@@ -23,11 +23,11 @@ Clayton.Markov.MLE(Y, k = 3, D = 1, plot = TRUE,GOF=FALSE,method = "nlm")
 \item{mu }{estimate, SE, and 95 percent CI}
 \item{sigma }{estimate, SE, and 95 percent CI}
 \item{alpha }{estimate, SE, and 95 percent CI}
-\item{CL }{LCL = mu - k*sigma, UCL = mu + k*sigma}
+\item{Control_Limit }{Center = mu, LCL = mu - k*sigma, UCL = mu + k*sigma}
 \item{out_of_control }{IDs for out-of-control points}
 \item{Gradient }{gradients (must be zero)}
 \item{Hessian }{Hessian matrix}
-\item{Mineigenvalue_Hessian }{Minimum eigenvalue for the Hessian matrix}
+\item{Eigenvalue_Hessian }{Eigenvalues for the Hessian matrix}
 \item{KS.test }{KS statistics}
 \item{CM.test }{CM statistics}
 \item{log.likelihood }{Log-likelihood value for the estimation}

@@ -14,8 +14,8 @@ Copulas are applied to model a Markov dependence for serially correlated time se
 \tabular{ll}{
 Package: \tab Copula.Markov\cr
 Type: \tab Package\cr
-Version: \tab 2.5\cr
-Date: \tab 2019-11-29\cr
+Version: \tab 2.6\cr
+Date: \tab 2020-1-8\cr
 License: GPL-2
 }
 }

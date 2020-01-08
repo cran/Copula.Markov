@@ -352,7 +352,7 @@ function(Y,k=3,D=1,plot=TRUE,GOF=FALSE, method = "nlm"){
 
   UCL=mu.hat+k*sigma.hat
   LCL=mu.hat-k*sigma.hat
-  CL = c(Upper = UCL, Lower = LCL)
+  CL = c(Center = mu.hat, Lower = LCL, Upper = UCL)
 
   result.mu = c(estimate = mu.hat, SE = SE_mu, Lower = lower_mu, Upper = upper_mu)
   result.sigma = c(estimate = sigma.hat, SE = SE_sigma, Lower = lower_sigma, Upper = upper_sigma)
@@ -387,8 +387,8 @@ function(Y,k=3,D=1,plot=TRUE,GOF=FALSE, method = "nlm"){
 
   return(
     list(mu=result.mu, sigma = result.sigma, alpha = result.alpha,
-         CL = CL, out_of_control=out_control,
-         Gradient=Gradient,Hessian=Hessian,Mineigenvalue_Hessian=min(eigen(Hessian)$value),
+         Control_Limit = CL, out_of_control=out_control,
+         Gradient=Gradient,Hessian=Hessian,Eigenvalue_Hessian=eigen(Hessian)$value,
          CM.test=CM.test,KS.test=KS.test, log_likelihood =  -log.L(c(mu.hat, log(sigma.hat), log(alpha.hat-1))) )
   )
 

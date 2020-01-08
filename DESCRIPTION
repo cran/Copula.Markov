@@ -2,9 +2,9 @@ Package: Copula.Markov
 Type: Package
 Title: Copula-Based Estimation and Statistical Process Control for
         Serially Correlated Time Series
-Version: 2.5
-Date: 2019-11-29
-Author: Takeshi Emura,  Xinwei Huang, Weiru Chen, Ting-Hsuan Long
+Version: 2.6
+Date: 2020-1-8
+Author: Takeshi Emura, Xinwei Huang, Weiru Chen, Ting-Hsuan Long
 Maintainer: Takeshi Emura <takeshiemura@gmail.com>
 Description: Estimation and statistical process control are performed under
  copula-based time-series models.
@@ -13,6 +13,6 @@ Description: Estimation and statistical process control are performed under
  Huang and Emura (2019 Commun Stat-Simul) <DOI:10.1080/03610918.2019.1602647> and Huang, Chen and Emura (2019-, in revision).
 License: GPL-2
 NeedsCompilation: no
-Packaged: 2019-11-29 01:30:17 UTC; user
+Packaged: 2020-01-08 05:31:07 UTC; user
 Repository: CRAN
-Date/Publication: 2019-11-29 05:30:02 UTC
+Date/Publication: 2020-01-08 07:50:02 UTC
