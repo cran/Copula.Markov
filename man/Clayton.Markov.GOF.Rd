@@ -9,7 +9,7 @@ Perform a parametric bootstrap test based on the Cramer-von Mises and Kolmogorov
  as proposed by Huang and Emura (2019).
 }
 \usage{
-Clayton.Markov.GOF(Y, k = 3, D = 1, B = 200,GOF.plot=FALSE)
+Clayton.Markov.GOF(Y, k = 3, D = 1, B = 200,GOF.plot=FALSE, method = "Newton")
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -18,6 +18,7 @@ Clayton.Markov.GOF(Y, k = 3, D = 1, B = 200,GOF.plot=FALSE)
   \item{D}{diameter for U(-D, D) used in randomized Newton-Raphson}
   \item{B}{the number of Bootstrap replications}
   \item{GOF.plot}{if TRUE, show the model diagnostic plots for B bootstrap replications}
+  \item{method}{Newton-Raphson method or nlm can be chosen}
 }
 \value{
 \item{CM}{The Cramer-von Mises statistic and its P-value}

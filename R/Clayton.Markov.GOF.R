@@ -1,6 +1,6 @@
-Clayton.Markov.GOF <- function(Y,k=3,D=1,B=200,GOF.plot=FALSE){
+Clayton.Markov.GOF <- function(Y,k=3,D=1,B=200,GOF.plot=FALSE, method = "Newton"){
   n=length(Y)
-  res=Clayton.Markov.MLE(Y,k=k,D=D,plot=FALSE,GOF=TRUE, method = "nlm")
+  res=Clayton.Markov.MLE(Y,k=k,D=D,plot=FALSE,GOF=TRUE, method = method)
 
   CM=KS=rep(NA,B)
   mu=res$mu[1]
@@ -9,7 +9,7 @@ Clayton.Markov.GOF <- function(Y,k=3,D=1,B=200,GOF.plot=FALSE){
 
   for(b in 1:B){
     Y.boot=Clayton.Markov.DATA(n=n,mu=mu,sigma=sigma,alpha=alpha)
-    res.boot=try(Clayton.Markov.MLE(Y.boot, k=k, D=D, plot=FALSE, GOF=GOF.plot, method = "nlm"))
+    res.boot=try(Clayton.Markov.MLE(Y.boot, k=k, D=D, plot=FALSE, GOF=GOF.plot, method = method))
     if("try-error"%in%class(res.boot)){
       next;
     }else{
