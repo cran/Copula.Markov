@@ -14,13 +14,13 @@ Copulas are applied to model a Markov dependence for serially correlated time se
 \tabular{ll}{
 Package: \tab Copula.Markov\cr
 Type: \tab Package\cr
-Version: \tab 2.7\cr
-Date: \tab 2020-1-17\cr
+Version: \tab 2.8\cr
+Date: \tab 2020-2-25\cr
 License: GPL-2
 }
 }
 \author{
-Emura T, Chen WR, Long TH, Huang X.
+Emura T, Huang XW, Chen WR, Long TH, Sun LH.
  Maintainer: Takeshi Emura <takeshiemura@gmail.com>
 }
 \references{
@@ -35,6 +35,9 @@ Emura T, Long TH, Sun LH (2017), R routines for performing estimation and
 
 Long TH and Emura T (2014), A control chart using copula-based Markov chain models,
  Journal of the Chinese Statistical Association 52 (No.4): 466-96
+
+Lin WC, Emura T, Sun LH (2019), Estimation under copula-based Markov normal mixture models for
+ serially correlated data, Communications in Statistics - Simulation and Computation, doi:10.1080/03610918.2019.1652318
 
 Huang XW, Emura T (2019), Model diagnostic procedures for copula-based Markov chain models
  for statistical process control, Communications in Statistics - Simulation and Computation,
