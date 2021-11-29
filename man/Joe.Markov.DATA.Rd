@@ -5,7 +5,7 @@
 Generating Time Series Data Under a Copula-Based Markov Chain Model with the Joe Copula
 }
 \description{
-Time-series datasets are generated under a copula-based Markov chain model with the Joe copula.
+Time-series data are generated under a copula-based Markov chain model with the Joe copula.
 }
 \usage{
 Joe.Markov.DATA(n, mu, sigma, alpha)

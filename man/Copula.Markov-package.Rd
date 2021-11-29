@@ -14,8 +14,8 @@ Copulas are applied to model a Markov dependence for serially correlated time se
 \tabular{ll}{
 Package: \tab Copula.Markov\cr
 Type: \tab Package\cr
-Version: \tab 2.8\cr
-Date: \tab 2020-2-25\cr
+Version: \tab 2.9\cr
+Date: \tab 2021-11-29\cr
 License: GPL-2
 }
 }
@@ -26,22 +26,22 @@ Emura T, Huang XW, Chen WR, Long TH, Sun LH.
 \references{
 Chen W (2018) Copula-based Markov chain model with binomial data, NCU Library
 
-Huang XW, Chen W, Emura T (2019-), Likelihood-based inference for a copula-based Markov
- chain model with binomial time series, in review
+Huang XW, Emura T (2021-), Computational methods for a copula-based Markov chain model with
+ a binomial time series, in review
 
 Emura T, Long TH, Sun LH (2017), R routines for performing estimation and
  statistical process control under copula-based time series models,
- Communications in Statistics - Simulation and Computation, 46 (4): 3067-87
+ Communications in Statistics - Simulation and Computation, 46(4):3067-87
 
 Long TH and Emura T (2014), A control chart using copula-based Markov chain models,
- Journal of the Chinese Statistical Association 52 (No.4): 466-96
+ Journal of the Chinese Statistical Association, 52(4):466-96
 
-Lin WC, Emura T, Sun LH (2019), Estimation under copula-based Markov normal mixture models for
- serially correlated data, Communications in Statistics - Simulation and Computation, doi:10.1080/03610918.2019.1652318
+Lin WC, Emura T, Sun LH (2021), Estimation under copula-based Markov normal mixture models for
+ serially correlated data, Communications in Statistics - Simulation and Computation, 50(12):4483-515
 
-Huang XW, Emura T (2019), Model diagnostic procedures for copula-based Markov chain models
+Huang XW, Emura T (2021), Model diagnostic procedures for copula-based Markov chain models
  for statistical process control, Communications in Statistics - Simulation and Computation,
- doi:10.1080/03610918.2019.1602647
+ doi: 50(8):2345-67
 
 }
 \keyword{ package }

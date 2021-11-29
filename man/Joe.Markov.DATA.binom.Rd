@@ -5,7 +5,7 @@
 Generating Time Series Data Under a Copula-Based Markov Chain Model with the Joe Copula and Binomial Margin.
 }
 \description{
-Time-series datasets are generated under a copula-based Markov chain model with the Joe copula and binomial margin.
+Time-series data are generated under a copula-based Markov chain model with the Joe copula and binomial margin.
 }
 \usage{
 Joe.Markov.DATA.binom(n, size, prob, alpha)
@@ -26,8 +26,8 @@ time series data
 \references{
 Chen W (2018) Copula-based Markov chain model with binomial data, NCU Library
 
-Huang X, Chen W, Emura T (2019-) A control chart using a copula-based Markov chain
- for attribute data, revision
+Huang XW, Emura T (2021-), Computational methods for a copula-based Markov chain model with
+ a binomial time series, in review
 }
 \author{
 Huang X, Emura T

@@ -35,9 +35,9 @@ Clayton.Markov2.MLE(Y, k = 3, D = 1, plot = TRUE, GOF=FALSE)
 \item{log.likelihood }{Log-likelihood value for the estimation}
 }
 \references{
-Huang XW, Emura T (2019), Model diagnostic procedures for copula-based Markov chain models
+Huang XW, Emura T (2021), Model diagnostic procedures for copula-based Markov chain models
  for statistical process control, Communications in Statistics - Simulation and Computation,
- doi:10.1080/03610918.2019.1602647
+ doi: 50(8):2345-67
 }
 \author{
 Xinwei Huang and Takeshi Emura

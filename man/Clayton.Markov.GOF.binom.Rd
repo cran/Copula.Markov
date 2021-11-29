@@ -27,12 +27,12 @@ Clayton.Markov.GOF.binom(Y, k = 3, size, B = 200,GOF.plot=FALSE, method = "Newto
 \item{KS.boot}{Bootstrap values of the Kolmogorov-Smirnov statistics}
 }
 \references{
-Huang XW, Emura T (2019), Model diagnostic procedures for copula-based Markov chain models
+Huang XW, Emura T (2021), Model diagnostic procedures for copula-based Markov chain models
  for statistical process control, Communications in Statistics - Simulation and Computation,
- doi:10.1080/03610918.2019.1602647
+ doi: 50(8):2345-67
 
-Huang XW, Chen W, Emura T (2019-), Likelihood-based inference for a copula-based Markov
- chain model with binomial time series, in review
+Huang XW, Emura T (2021-), Computational methods for a copula-based Markov chain model with
+ a binomial time series, in review
 }
 \author{
 Huang XW, Emura T

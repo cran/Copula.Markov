@@ -5,7 +5,7 @@
 Generating Time Series Data Under a Copula-Based 2nd-order Markov Chain Model with the Clayton Copula
 }
 \description{
-Time-series datasets are generated under a copula-based 2nd order Markov chain model with the Clayton copula.
+Time-series data are generated under a copula-based 2nd order Markov chain model with the Clayton copula.
 }
 \usage{
 Clayton.Markov2.DATA(n, mu, sigma, alpha)
@@ -24,9 +24,9 @@ Clayton.Markov2.DATA(n, mu, sigma, alpha)
 Time series data of size n
 }
 \references{
-Huang XW, Emura T (2019), Model diagnostic procedures for copula-based Markov chain models
+Huang XW, Emura T (2021), Model diagnostic procedures for copula-based Markov chain models
  for statistical process control, Communications in Statistics - Simulation and Computation,
- doi:10.1080/03610918.2019.1602647
+ doi: 50(8):2345-67
 }
 \author{
 Xinwei Huang and Takeshi Emura

@@ -5,7 +5,7 @@
 Generating Time Series Data Under a Copula-Based Markov Chain Model with the Clayton Copula
 }
 \description{
-Time-series datasets are generated under a copula-based Markov chain model with the Clayton copula.
+Time-series data are generated under a copula-based Markov chain model with the Clayton copula.
  See Long et al. (2014) and Emura et al. (2017) for the details.
 }
 \usage{

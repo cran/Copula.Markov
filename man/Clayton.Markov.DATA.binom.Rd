@@ -5,7 +5,7 @@
 Generating Time Series Data Under a Copula-Based Markov Chain Model with the Clayton Copula and Binomial Margin.
 }
 \description{
-Time-series datasets are generated under a copula-based Markov chain model with the Clayton copula and binomial margin.
+Time-series data are generated under a copula-based Markov chain model with the Clayton copula and binomial margin.
 }
 \usage{
 Clayton.Markov.DATA.binom(n, size, prob, alpha)
@@ -26,8 +26,8 @@ Time series data of size n (this is different from the number of binomial trials
 \references{
 Chen W (2018) Copula-based Markov chain model with binomial data, NCU Library
 
-Huang XW, Chen W, Emura T (2019-), Likelihood-based inference for a copula-based Markov
- chain model with binomial time series, in review
+Huang XW, Emura T (2021-), Computational methods for a copula-based Markov chain model with
+ a binomial time series, in review
 }
 \author{
 Huang XW, Chen W, Emura T

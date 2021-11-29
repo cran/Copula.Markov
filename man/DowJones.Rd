@@ -15,7 +15,8 @@ The log return of weekly stock price of Dow Jones Industrial Average from 2008/1
   }
 }
 \references{
-Lin WC, Emura T, Sun LH (2019) Estimation under copula-based Markov normal mixture models for serially correlated data,  Comm Stat - Simu, doi:10.1080/03610918.2019.1652318
+Lin WC, Emura T, Sun LH (2021), Estimation under copula-based Markov normal mixture models for
+ serially correlated data, Communications in Statistics - Simulation and Computation, 50(12):4483-515
 }
 \examples{
 data(DowJones)
